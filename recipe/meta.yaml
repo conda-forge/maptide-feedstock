@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/maptide-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/maptide-{{ version }}.tar.gz
   sha256: 1885fba5cc0a4d43dbaf24225580584afa22c5c569b41c44110850c98e7c3725
 
 build:
@@ -14,7 +14,7 @@ build:
   entry_points:
     - maptide = maptide.cli:run
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   build:
